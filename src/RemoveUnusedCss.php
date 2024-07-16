@@ -116,10 +116,10 @@ trait RemoveUnusedCss
     /**
      * Add items to the style sheets array
      *
-     * @param   string  ...$styleSheets
+     * @param   array $styleSheets
      * @return  $this
      */
-    public function styleSheets(string ...$styleSheets)
+    public function styleSheets(array $styleSheets)
     {
         foreach ($styleSheets as $styleSheet) {
 
@@ -135,10 +135,10 @@ trait RemoveUnusedCss
     /**
      * Add items to the html files array
      *
-     * @param   string  ...$htmlFiles
+     * @param   array $htmlFiles
      * @return  $this
      */
-    public function htmlFiles(string ...$htmlFiles)
+    public function htmlFiles(array $htmlFiles)
     {
         foreach ($htmlFiles as $htmlFile) {
 
