@@ -15,7 +15,8 @@ Often this is done with JS however that can raise issues if you want to work thi
 Installation via composer:
 
 ```
-composer require momentum81/php-remove-unused-css
+composer require Flaschenzug/php-remove-unused-css
+(original Version: composer require Momentum81/php-remove-unused-css )
 ```
 
 ## Example
