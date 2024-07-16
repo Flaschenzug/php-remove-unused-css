@@ -1,6 +1,6 @@
 ## Overview
 
-PHP Remove Unused CSS is a tool to remove unused CSS from your website using PHP. Developed by Momentum 81 - https://momentum81.com.
+PHP Remove Unused CSS is a tool to remove unused CSS from your website using PHP. Developed by Momentum 81 - https://momentum81.com. Updated by https://medienweide.com
 
 ```diff
 - IMPORTANT! MAKE SURE YOU READ THE GUIDE FIRST OR YOU MAY INADVERTENTLY OVERWRITE YOUR CSS
@@ -24,8 +24,8 @@ composer require momentum81/php-remove-unused-css
 $removeUnusedCss = new \Momentum81\PhpRemoveUnusedCss\RemoveUnusedCssBasic();
 
 $removeUnusedCss->whitelist('.fab', '.far', '.fal')
-    ->styleSheets(public_path('**/*.css'))
-    ->htmlFiles(resource_path('**/*.blade.php'))
+    ->styleSheets(['ARRAY','WITH','paths'])
+    ->htmlFiles(['ARRAY','WITH','paths'])
     ->setFilenameSuffix('.refactored.min')
     ->minify()
     ->refactor()
@@ -34,10 +34,8 @@ $removeUnusedCss->whitelist('.fab', '.far', '.fal')
 
 ## Classes
 
-The are two main ways of using the package:
-
 * Basic
-* Complete (In Development, not yet available)
+
 
 ### Basic Class
 
@@ -63,11 +61,6 @@ The following CSS Classes would match and be kept, despite the `.hello` class be
 .test .hello {}
 .test .hello::after {}
 ```
-
-### Complete Class
-
-In Development. This method attempts to be smarter and where possible traverse the DOM as much as it can (When using a templating system this is infinitely more difficult if your views are not cached, so the system can only do so well here).
-
 
 ### Available Methods
 
